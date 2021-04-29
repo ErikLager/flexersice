@@ -8,11 +8,10 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.left{
+.left, .right{
     display: flex;
 }
 .right{
-    display: flex;
     justify-content: flex-end;
     position: relative;
 }
@@ -42,7 +41,6 @@ a:first-of-type{
 }
 @media (max-width: 655px) {
     .navbar{
-        font-size: .8rem;
         overflow: hidden;
     }
     .right a:first-of-type, .dropdowncontent{
