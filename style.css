@@ -7,7 +7,6 @@
     width: 100vw;
     flex-direction: row;
     justify-content: space-between;
-    overflow: hidden;
 }
 .left{
     display: flex;
@@ -16,7 +15,6 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
-    display: inline-block;
 }
 .right a:first-of-type{
     display: none;
@@ -35,8 +33,8 @@ a:first-of-type{
 .dropdowncontent{
     display: none;
     position: absolute;
-    background-color: orange;
-    min-width: 100px;
+    width: 200px;
+    height: 1rem;
     z-index: 1;
 }
 .dropdowncontent a{
@@ -45,6 +43,15 @@ a:first-of-type{
 @media (max-width: 655px) {
     .navbar{
         font-size: .8rem;
+        overflow: hidden;
+    }
+    .right a:first-of-type, .dropdowncontent{
+        overflow: hidden;
+    }
+    .dropdowncontent{
+        display: none;
+        position: absolute;
+        background-color: orange;
     }
     .right a:first-of-type{
         display: flex;
@@ -56,6 +63,5 @@ a:first-of-type{
 
     .right a:first-of-type:hover .dropdowncontent{
         display: block;
-        background-color: orange;
     }
 }
