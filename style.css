@@ -14,6 +14,7 @@
 .right{
     justify-content: flex-end;
     position: relative;
+    flex: 1;
 }
 .right a:first-of-type{
     display: none;
@@ -33,21 +34,15 @@ a:first-of-type{
     display: none;
     position: absolute;
     width: 200px;
-    height: 1rem;
-    z-index: 1;
+    z-index: 2;
+    top: 4rem;
+    left: 0;
 }
 .dropdowncontent a{
     display: block;
 }
 @media (max-width: 655px) {
-    .navbar{
-        overflow: hidden;
-    }
-    .right a:first-of-type, .dropdowncontent{
-        overflow: hidden;
-    }
     .dropdowncontent{
-        display: none;
         position: absolute;
         background-color: orange;
     }
@@ -57,9 +52,9 @@ a:first-of-type{
     .right a:not(:first-of-type){
         display: none;
     }
-    .right a:first-of-type:hover{background-color: teal;}
+}
+.right a:first-of-type:hover{background-color: teal;}
 
-    .right a:first-of-type:hover .dropdowncontent{
-        display: block;
-    }
+.right:hover .dropdowncontent{
+    display: block;
 }
